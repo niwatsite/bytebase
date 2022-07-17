@@ -9,7 +9,7 @@
 # ./staging.sh https://example.com:8080
 
 # If no parameter is passed, use https://staging.bytebase.com as host and 443 as port by default
-ONLINE_DEMO_HOST='https://staging.bytebase.com'
+ONLINE_DEMO_HOST='https://render-cloud.onrender.com'
 ONLINE_DEMO_PORT='443'
 if [ $1 ]; then
     PROTOCAL=$(echo $1 | awk -F ':' '{ print $1 }')
@@ -25,4 +25,4 @@ fi
 
 echo "Starting Bytebase in demo mode at ${ONLINE_DEMO_HOST}:${ONLINE_DEMO_PORT}..."
 
-bytebase --host ${ONLINE_DEMO_HOST} --port ${ONLINE_DEMO_PORT} --demo --data /var/opt/bytebase --debug
+bytebase --host ${ONLINE_DEMO_HOST} --port ${ONLINE_DEMO_PORT} --data /var/opt/bytebase --debug
